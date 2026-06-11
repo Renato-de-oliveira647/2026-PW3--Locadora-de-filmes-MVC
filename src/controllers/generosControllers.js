@@ -4,7 +4,7 @@ const GeneroController = {
     async getAllGeneros(req, res) {
         const generos = await GeneroModel.findAll()
 
-        return res.joson(generos)
+        return res.json(generos)
 
     },
  

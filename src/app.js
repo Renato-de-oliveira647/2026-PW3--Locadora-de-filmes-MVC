@@ -1,6 +1,7 @@
 const express = require("express")
 
 const testRoutes = require("./routes/testroutes")
+const generoRoutes =require("./routes/generoRouter")
 
 const app = express()
  
@@ -11,6 +12,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/test",testRoutes)
+app.use("/generos",generoRoutes)
 
 module.exports = app
 
