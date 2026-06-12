@@ -6,7 +6,7 @@ exports.up = function(knex) {
   return knex.schema.createTable("diretores",(table) => {
     table.increments("id").primary()
     table.string("nome").notNullable()
-    table.timestamps(true, true)
+    table.timestamp(true, true)
  })
 };
 
