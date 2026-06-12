@@ -1,8 +1,8 @@
 const connection = require("../database/connection")
 
-const GeneroModel = {
+const DiretorModel = {
     async findAll(){
-        const result = await connection.raw("SELECT * FROM generos")
+        const result = await connection.raw("SELECT * FROM diretores")
 
         return result
     },
@@ -11,7 +11,7 @@ const GeneroModel = {
         const { nome } = data
 
         const result = await connection.raw(
-            "INSERT INTO generos (nome) VALUES (?)",
+            "INSERT INTO diretores (nome) VALUES (?)",
             [ nome ]
         )
 
@@ -19,4 +19,4 @@ const GeneroModel = {
     }
 }
 
-module.exports = GeneroModel
+module.exports = DiretorModel
